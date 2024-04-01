@@ -5,8 +5,10 @@
 
 Shader::Shader(const char* filePath, GLenum type): type(type)
 {
-	const std::vector<char> shaderCode = readFile(filePath);
+	std::vector<char> shaderCode = readFile(filePath);
+	shaderCode.push_back('\0');
 	const char* shaderCodePtr = shaderCode.data();
+
 	shader = glCreateShader(type);
 	glShaderSource(shader, 1, &shaderCodePtr, NULL);
 	glCompileShader(shader);
