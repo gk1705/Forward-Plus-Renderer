@@ -227,14 +227,14 @@ void Application::MessageCallback(GLenum source, GLenum type, GLuint id, GLenum 
 	const GLchar* message, const void* userParam)
 {
 	// ignore non-significant error/warning codes, comment that out if you want to see those, but opengl just floods the console with them
-	/*if (severity != GL_DEBUG_SEVERITY_HIGH || severity != GL_DEBUG_SEVERITY_MEDIUM)
-		{
-			return;
-		}*/
+	if (severity != GL_DEBUG_SEVERITY_HIGH || severity != GL_DEBUG_SEVERITY_MEDIUM)
+	{
+		return;
+	}
 
 	fprintf(stderr, "GL CALLBACK: %s type = 0x%x, severity = 0x%x, message = %s\n",
-	        (type == GL_DEBUG_TYPE_ERROR ? "** GL ERROR **" : ""),
-	        type, severity, message);
+		(type == GL_DEBUG_TYPE_ERROR ? "** GL ERROR **" : ""),
+		type, severity, message);
 }
 
 void Application::keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods)
@@ -317,4 +317,3 @@ void Application::mouseCallback(GLFWwindow* window, double xpos, double ypos)
 		std::cout << std::endl;
 		std::cout << "---------------------opengl-callback-end--------------" << std::endl;
 	}*/
-
