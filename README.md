@@ -3,7 +3,7 @@
 This is an implementation of a forward renderer that leverages clustered light culling. The approach ensures the evaluation of only those lights that have an impact on a specific cluster during the primary rendering phase. Clusters are generated during the initialization process. The determination of intersecting clusters is conducted within a compute shader. Utilizing a texture derived from a depth pre-pass, a compute shader projects the screen space coordinates and depth onto a grid of clusters, thereby identifying which clusters are in an active state.
 Subsequently, a compute shader compacts these active clusters to optimize the process. The identification of active clusters is based on their intersection with the bounding spheres of scene point lights. An additional array is constructed to delineate which lights are active in each cluster. During the main rendering pass, the lighting calculation employs the projection of screen space coordinates and depth to cluster grid coordinates. This projection facilitates the retrieval of information pertaining to the active lights within the current cluster, ensuring an efficient and focused lighting evaluation.
 
-## Current Features of the Renderer:
+# Current Features of the Renderer:
 
 - Depth Pre-Pass: Reduces overdraw by rendering to depth buffer before the main pass, SSAO also uses this buffer
 - OBJ Model Loading: Supports loading of OBJ format models
@@ -16,7 +16,7 @@ Subsequently, a compute shader compacts these active clusters to optimize the pr
 - Screen Space Ambient Occlusion: Normals recreated from depth buffer using GLSL dFdy/dFdx, with some artifacts smoothed by box blurring
 - Blending and Post-Processing
 
-## Following features are under consideration right now:
+# Following features are under consideration right now:
 
 - Screen Space Reflections
 - Volumetric Lighting
@@ -38,10 +38,10 @@ Subsequently, a compute shader compacts these active clusters to optimize the pr
 * **Visual Studio:**
 	- Project is set up to be developed with Microsoft Visual Studio.
 	
-## The following educational resources were drawn upon and I could not have created the renderer without them. Therefore I would like to express my sincere thanks to them:
-Ángel Ortiz' Article about Clustered Shading: https://www.aortiz.me/2018/12/21/CG.html
-Arijit Nandi's Article about SSAO in a Forward Renderer: https://betterprogramming.pub/depth-only-ssao-for-forward-renderers-1a3dcfa1873a
-Joey de Vries' comprehensive OpenGL Tutorial Series: https://learnopengl.com/
+# The following educational resources were drawn upon and I could not have created the renderer without them. Therefore I would like to express my sincere thanks to them:
+Ángel Ortiz' Article about Clustered Shading: https://www.aortiz.me/2018/12/21/CG.html <br />
+Arijit Nandi's Article about SSAO in a Forward Renderer: https://betterprogramming.pub/depth-only-ssao-for-forward-renderers-1a3dcfa1873a <br />
+Joey de Vries' comprehensive OpenGL Tutorial Series: https://learnopengl.com/ <br />
 The book Real-Time Rendering (Fourth Edition) by Tomas Akenine-Möller, Eric Haines, Naty Hoffman, Angelo Pesce, Michał Iwanicki, and Sébastien Hillaire: https://www.realtimerendering.com/
 
 ## Assets used:
