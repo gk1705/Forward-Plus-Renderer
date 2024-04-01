@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Actor.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Application.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="BloomPass.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="ClusterGrid.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="DepthPrePass.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectionalLight.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="EnvironmentMap.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="EnvironmentMapPass.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="glad.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="LightCullingPass.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="LightManager.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="MainRenderPass.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Model.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="PointLight.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="PostProcessingPass.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderContext.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderingPassFactory.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderingPipelineManager.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceManager.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenSpaceQuad.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="ShaderProgram.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="ShadowCubemapPrerequisites.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="ShadowMapPrerequisites.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="ShadowPass.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Skybox.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="SpotLight.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="SSAOPass.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="EnvironmentMapPass.h">
+      <Filter>Headers</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenSpaceQuad.h">
+      <Filter>Headers</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Actor.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Application.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="BloomPass.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="ClusterGrid.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="DepthPrePass.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectionalLight.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="EnvironmentMap.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="IRenderPass.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="LightCullingPass.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="LightManager.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="MainRenderPass.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Model.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="PointLight.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="PostProcessingPass.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderContext.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderingPassFactory.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderingPipelineManager.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceManager.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderProgram.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="ShadowCubemapPrerequisites.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="ShadowMapPrerequisites.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="ShadowPass.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Singleton.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Skybox.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="SpotLight.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="SSAOPass.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Vertex.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="shaders\activeClusterSelection.comp">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\bloom.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\bloom.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\brdfLut.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\brdfLut.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\clusteredLightCulling.comp">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\compactClusters.comp">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\cubemapConvolution.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\cubemapPrefilter.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\depthCubemap.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\depthCubemap.geom">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\depthCubemap.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\ssaoBlur.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\ssaoBlur.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\ssao.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\ssao.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\skybox.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\skybox.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\shader.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\shader.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\screen_quad.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\screen_quad.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\resetClusters.comp">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\reflective.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\reflective.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\outline.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\outline.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\environmentMap.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\environmentMap.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\depthPass.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\depthPass.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\depthMap.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="shaders\depthMap.vert">
+      <Filter>Shaders</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{709a7ac5-1e21-4287-9b77-83bf41a924e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{5ae23893-d0f2-47b2-9511-468b675c988f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{5b51ecd8-7ff3-482b-a1bd-b480819f069b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

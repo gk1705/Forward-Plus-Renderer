@@ -1,0 +1,29 @@
+#version 460 core
+
+layout (local_size_x = 1, local_size_y = 1, local_size_z = 1) in;
+
+layout(std430, binding = 1) buffer BoolArray {
+	uint activeClusters[];
+};
+
+layout(std430, binding = 2) buffer CompactClusters {
+	uint compactClusters[];
+};
+
+layout(std140, binding = 3) buffer GlobalCount {
+	uint activeClusterCount;
+};
+
+uniform int numClustersZ;
+uniform int numClustersX;
+uniform int numClustersY;
+
+void main()
+{
+	int clusterIndex =	int(gl_GlobalInvocationID.x + gl_GlobalInvocationID.y * numClustersX + gl_GlobalInvocationID.z * numClustersX * numClustersY);
+	if (activeClusters[clusterIndex] == 1)
+	{
+		uint offset = atomicAdd(activeClusterCount, 1);
+		compactClusters[offset] = clusterIndex;
+	}
+}

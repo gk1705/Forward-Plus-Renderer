@@ -1,0 +1,49 @@
+#version 460 core
+#extension GL_NV_uniform_buffer_std430_layout : enable
+
+layout (local_size_x = 1, local_size_y = 1, local_size_z = 1) in;
+
+layout(binding = 0) uniform sampler2D depthTexture;
+
+layout(std430, binding = 1) buffer BoolArray {
+	uint activeClusters[];
+};
+
+uniform float zNear;
+uniform float zFar;
+uniform int numClustersZ;
+uniform int numClustersX;
+uniform int numClustersY;
+uniform int clusterSizePx;
+
+uniform vec2 screenDimensions;
+
+uint getDepthSlice(float depth)
+{
+	return uint(floor(log(depth) * (numClustersZ / log(zFar / zNear)) - (numClustersZ * log(zNear) / log(zFar / zNear))));
+}
+
+float linearizeDepth(float z) {
+//    float z_n = 2.0 * z - 1.0; // back to NDC
+//    return (2.0 * zNear * zFar) / (zFar + zNear - z_n * (zFar - zNear));
+	return (zNear * zFar) / (zFar + zNear - z * (zFar - zNear));
+}
+
+uint getClusterIndex(vec3 pixelCoord)
+{
+	float linearizedZ = linearizeDepth(pixelCoord.z);
+	uint clusterZVal = getDepthSlice(float(linearizedZ));
+	uvec3 cluster = uvec3(pixelCoord.xy / clusterSizePx, clusterZVal);
+	return cluster.x + cluster.y * numClustersX + cluster.z * numClustersX * numClustersY;
+}
+
+void main()
+{
+	vec2 screenCoord = vec2(gl_GlobalInvocationID.xy) / screenDimensions;
+	//vec2 texCoord = vec2(gl_GlobalInvocationID.xy) / textureSize(depthTexture, 0);
+	//vec2 texCoord = vec2(1-screenCoord.x, screenCoord.y);
+	precise float depth = texture(depthTexture, screenCoord).r;
+	vec3 pixelCoord = vec3(gl_GlobalInvocationID.xy, depth);
+	uint activeClusterIndex = getClusterIndex(pixelCoord);
+	activeClusters[activeClusterIndex] = 1;
+}
